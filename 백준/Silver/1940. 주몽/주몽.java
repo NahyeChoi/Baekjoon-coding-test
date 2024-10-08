@@ -28,9 +28,11 @@ public class Main {
         int end = N-1;
        while(start < end) {
            int sum = arr[start] + arr[end];
-            if (sum < M) { start++; }
-            if (sum > M) { end--; }
-            if (sum == M) {
+            if (sum < M) {
+                start++;
+            } else if (sum > M) {
+                end--;
+            } else {
                 cnt++;
                 start++;
                 end--;
